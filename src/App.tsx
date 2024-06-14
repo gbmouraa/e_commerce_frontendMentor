@@ -1,9 +1,9 @@
-import { Button } from "./components/ui/button";
+import Header from "./components/header";
 
 const App = () => {
   return (
     <div>
-      <Button>Click Me</Button>
+      <Header />
     </div>
   );
 };

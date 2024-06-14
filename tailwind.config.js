@@ -15,6 +15,9 @@ export const theme = {
     },
   },
   extend: {
+    colors: {
+      "primary-orange": "hsl(26, 100%, 55%)",
+    },
     keyframes: {
       "accordion-down": {
         from: { height: "0" },
