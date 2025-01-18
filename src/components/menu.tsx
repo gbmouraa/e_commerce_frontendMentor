@@ -23,7 +23,10 @@ const Menu = () => {
         <SheetContent side="left">
           <ul className="mt-12 space-y-4">
             {menuItems.map((item) => (
-              <li key={item} className="text-lg font-bold">
+              <li
+                key={item}
+                className="cursor-pointer text-lg font-bold transition-all hover:text-gray-500"
+              >
                 {item}
               </li>
             ))}
