@@ -1,11 +1,11 @@
 import Header from "./components/header";
-import ProductCarousel from "./components/product-carousel";
+import { Product } from "./components/product";
 
 const App = () => {
   return (
     <div>
       <Header />
-      <ProductCarousel />
+      <Product />
     </div>
   );
 };
