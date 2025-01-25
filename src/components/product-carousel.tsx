@@ -20,7 +20,11 @@ const ProductCarousel = () => {
         <CarouselContent>
           {carouselImages.map((item, idx) => (
             <CarouselItem key={idx} className="max-h-[400px] overflow-hidden">
-              <img src={item} alt="Product" className="w-full" />
+              <img
+                src={item}
+                alt="Product"
+                className="max-h-[360px] w-full object-cover"
+              />
             </CarouselItem>
           ))}
         </CarouselContent>

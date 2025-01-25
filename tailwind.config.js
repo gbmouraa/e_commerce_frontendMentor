@@ -10,11 +10,11 @@ export const theme = {
   container: {
     center: true,
     padding: "2rem",
-    screens: {
-      "2xl": "1400px",
-    },
   },
   extend: {
+    screens: {
+      custom: "800px",
+    },
     colors: {
       "primary-orange": "hsl(26, 100%, 55%)",
     },
