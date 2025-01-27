@@ -1,12 +1,15 @@
 import Header from "./components/header";
 import { Product } from "./components/product";
+import { ProductProvider } from "./contexts/product";
 
 const App = () => {
   return (
-    <div>
-      <Header />
-      <Product />
-    </div>
+    <>
+      <ProductProvider>
+        <Header />
+        <Product />
+      </ProductProvider>
+    </>
   );
 };
 
