@@ -25,7 +25,7 @@ const CartItem = () => {
         </Button>
       </div>
 
-      <Button className="bg-primary-orange mt-5 h-14 w-full text-base font-bold text-black">
+      <Button className="mt-5 h-14 w-full bg-primary-orange text-base font-bold text-black">
         Checkout
       </Button>
     </div>
