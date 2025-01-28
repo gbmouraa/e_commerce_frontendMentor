@@ -18,7 +18,7 @@ export const ProductProvider = ({
   children: React.ReactNode;
 }) => {
   const [product, setProduct] = useState<Product>({
-    quantity: 1,
+    quantity: 0,
     totalPrice: 0,
   });
 

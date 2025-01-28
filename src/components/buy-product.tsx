@@ -18,6 +18,14 @@ export const BuyProduct = () => {
     }));
   };
 
+  const addProductToCart = () => {
+    const totalPrice: number = product.quantity * 125;
+    setProduct((prev) => ({
+      ...prev,
+      totalPrice: Number(totalPrice.toFixed(2)),
+    }));
+  };
+
   return (
     <div>
       {/* PRICE */}
@@ -42,7 +50,11 @@ export const BuyProduct = () => {
             <Plus color="hsl(26, 100%, 55%)" />
           </button>
         </div>
-        <button className="mt-2 flex w-full items-center justify-center gap-x-2 rounded-lg bg-primary-orange py-3 font-bold transition-all hover:opacity-70 custom:mt-0">
+        <button
+          className="mt-2 flex w-full items-center justify-center gap-x-2 rounded-lg bg-primary-orange py-3 font-bold transition-all hover:opacity-70 custom:mt-0"
+          onClick={addProductToCart}
+          disabled={product.quantity === 0}
+        >
           <ShoppingCart size={18} /> Add to cart
         </button>
       </div>
