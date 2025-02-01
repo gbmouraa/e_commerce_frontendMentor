@@ -23,6 +23,7 @@ import { X } from "lucide-react";
 export const ProductCarouselDesktop = () => {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
+  // eslint-disable-next-line
   const [count, setCount] = React.useState(0);
 
   const { carousel, setCarousel } = useCarousel();
@@ -52,7 +53,7 @@ export const ProductCarouselDesktop = () => {
         currentImage: api.selectedScrollSnap(),
       }));
     });
-  }, [api]);
+  }, [api, carousel.currentImage, setCarousel]);
 
   const handleThumbnailClick = (idx: number): void => {
     if (api) {
