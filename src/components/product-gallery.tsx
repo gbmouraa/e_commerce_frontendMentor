@@ -1,10 +1,5 @@
 import { useCarousel } from "@/hooks/useCarousel";
-
-import productImage from "../assets/image-product-1.jpg";
-import thumbnail01 from "../assets/image-product-1-thumbnail.jpg";
-import thumbnail02 from "../assets/image-product-2-thumbnail.jpg";
-import thumbnail03 from "../assets/image-product-3-thumbnail.jpg";
-import thumbnail04 from "../assets/image-product-4-thumbnail.jpg";
+import { carouselImages, thumbnails } from "@/assets/images-group";
 
 export const ProductGallery = () => {
   const { carousel, setCarousel } = useCarousel();
@@ -17,19 +12,12 @@ export const ProductGallery = () => {
     }));
   };
 
-  const thumbnails: string[] = [
-    thumbnail01,
-    thumbnail02,
-    thumbnail03,
-    thumbnail04,
-  ];
-
   return (
     <>
       <div className="relative max-w-[350px] lg:max-w-full lg:px-[60px]">
         <div>
           <img
-            src={productImage}
+            src={carouselImages[0]}
             alt="Product"
             className="max-h-[440px] rounded-lg"
           />

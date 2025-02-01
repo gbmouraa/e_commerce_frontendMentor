@@ -9,41 +9,21 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
-
-import image01 from "../assets/image-product-1.jpg";
-import image02 from "../assets/image-product-2.jpg";
-import image03 from "../assets/image-product-3.jpg";
-import image04 from "../assets/image-product-4.jpg";
-import thumbnail01 from "../assets/image-product-1-thumbnail.jpg";
-import thumbnail02 from "../assets/image-product-2-thumbnail.jpg";
-import thumbnail03 from "../assets/image-product-3-thumbnail.jpg";
-import thumbnail04 from "../assets/image-product-4-thumbnail.jpg";
+import { thumbnails, carouselImages } from "@/assets/images-group";
 import { X } from "lucide-react";
 
-export const ProductCarouselDesktop = () => {
+export const ProductSlider = () => {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
-  // eslint-disable-next-line
-  const [count, setCount] = React.useState(0);
 
   const { carousel, setCarousel } = useCarousel();
-
-  const carouselImages: string[] = [image01, image02, image03, image04];
-  const thumbnails: string[] = [
-    thumbnail01,
-    thumbnail02,
-    thumbnail03,
-    thumbnail04,
-  ];
 
   React.useEffect(() => {
     if (!api) {
       return;
     }
 
-    setCount(api.scrollSnapList().length - 1);
     setCurrent(carousel.currentImage);
-
     api.scrollTo(carousel.currentImage);
 
     api.on("select", () => {
