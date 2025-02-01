@@ -9,7 +9,6 @@ const CartItem = () => {
   const deleteProductFromCart = () => {
     setProduct((prev) => ({
       ...prev,
-      quantity: 0,
       totalPrice: 0,
     }));
   };
