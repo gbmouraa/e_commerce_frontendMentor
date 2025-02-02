@@ -6,14 +6,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import image01 from "../assets/image-product-1.jpg";
-import image02 from "../assets/image-product-2.jpg";
-import image03 from "../assets/image-product-3.jpg";
-import image04 from "../assets/image-product-4.jpg";
+import { carouselImages } from "@/assets/images-group";
 
 const ProductCarousel = () => {
-  const carouselImages: string[] = [image01, image02, image03, image04];
-
   return (
     <div className="flex items-center">
       <Carousel>
