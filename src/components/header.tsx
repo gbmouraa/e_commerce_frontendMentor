@@ -4,6 +4,14 @@ import Menu from "./menu";
 import Cart from "./cart";
 
 const Header = () => {
+  const menuList: string[] = [
+    "Collections",
+    "Men",
+    "Women",
+    "About",
+    "Contact",
+  ];
+
   return (
     <div className="m-auto px-4 py-5 custom:max-w-[1100px] custom:py-0 xl:px-0">
       <header className="flex items-center custom:items-start custom:pt-10">
@@ -16,36 +24,17 @@ const Header = () => {
         </div>
         {/* MENU */}
         <ul className="hidden flex-1 items-center gap-x-6 custom:flex">
-          <li className="group cursor-pointer text-zinc-500 transition-all hover:text-zinc-700">
-            <div className="flex h-[70px] flex-col justify-between">
-              <span className="inline-block">Collections</span>
-              <div className="h-1 w-0 bg-primary-orange transition-all duration-300 group-hover:w-full" />
-            </div>
-          </li>
-          <li className="group cursor-pointer text-zinc-500 transition-all hover:text-zinc-700">
-            <div className="flex h-[70px] flex-col justify-between">
-              <span className="inline-block">Men</span>
-              <div className="h-1 w-0 bg-primary-orange transition-all duration-300 group-hover:w-full" />
-            </div>
-          </li>
-          <li className="group cursor-pointer text-zinc-500 transition-all hover:text-zinc-700">
-            <div className="flex h-[70px] flex-col justify-between">
-              <span className="inline-block">Women</span>
-              <div className="h-1 w-0 bg-primary-orange transition-all duration-300 group-hover:w-full" />
-            </div>
-          </li>
-          <li className="group cursor-pointer text-zinc-500 transition-all hover:text-zinc-700">
-            <div className="flex h-[70px] flex-col justify-between">
-              <span className="inline-block">About</span>
-              <div className="h-1 w-0 bg-primary-orange transition-all duration-300 group-hover:w-full" />
-            </div>
-          </li>
-          <li className="group cursor-pointer text-zinc-500 transition-all hover:text-zinc-700">
-            <div className="flex h-[70px] flex-col justify-between">
-              <span className="inline-block">Contact</span>
-              <div className="h-1 w-0 bg-primary-orange transition-all duration-300 group-hover:w-full" />
-            </div>
-          </li>
+          {menuList.map((item, idx) => (
+            <li
+              key={idx}
+              className="group cursor-pointer text-zinc-500 transition-all hover:text-zinc-700"
+            >
+              <div className="flex h-[70px] flex-col justify-between">
+                <span className="inline-block">{item}</span>
+                <div className="h-1 w-0 bg-primary-orange transition-all duration-300 group-hover:w-full" />
+              </div>
+            </li>
+          ))}
         </ul>
         <div className="flex items-center space-x-4">
           <Cart />
